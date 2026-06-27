@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Woodsage Partners, Inc.</title>
+<meta name="description" content="Woodsage Partners is an Indianapolis-based holding company for a small family of ventures applying creative problem-solving and applied AI to problems worth solving.">
+
+<!-- Open Graph / social preview -->
+<meta property="og:title" content="Woodsage Partners, Inc.">
+<meta property="og:description" content="Purpose-built ventures at the intersection of people, problem-solving, and technology.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://woodsagepartners.com">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --canvas:#F4F2EA;     /* warm paper */
+    --sand:#EAE6DA;       /* card surface */
+    --ink:#2C3327;        /* deep forest-charcoal (text) */
+    --sage:#7E8E6A;       /* brand green */
+    --sage-deep:#566A47;  /* deeper green (emphasis/hover) */
+    --bark:#6E5E4C;       /* warm brown (secondary) */
+    --line:rgba(44,51,39,.14);
+    --maxw:1080px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--canvas);
+    color:var(--ink);
+    font-family:"Hanken Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  a{color:inherit;}
+
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+
+  /* ---- Eyebrow / labels ---- */
+  .eyebrow{
+    font-size:.74rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:600;
+    color:var(--sage-deep);
+    margin:0 0 1rem;
+  }
+
+  /* ---- Header ---- */
+  .masthead{
+    position:sticky; top:0; z-index:10;
+    background:color-mix(in srgb, var(--canvas) 88%, transparent);
+    backdrop-filter:saturate(120%) blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .masthead .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    height:64px;
+  }
+  .brand{
+    font-family:"Fraunces", Georgia, serif;
+    font-weight:600;
+    font-size:1.18rem;
+    letter-spacing:.005em;
+    display:flex; align-items:center; gap:.55rem;
+    text-decoration:none;
+    white-space:nowrap;
+  }
+  .brand svg{display:block; flex:none;}
+  .masthead nav{display:flex; gap:1.2rem; white-space:nowrap;}
+  .masthead nav a{
+    text-decoration:none;
+    font-size:.82rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    font-weight:600;
+    color:var(--bark);
+    padding:.4rem .1rem;
+    border-bottom:2px solid transparent;
+    transition:border-color .2s ease, color .2s ease;
+  }
+  .masthead nav a:hover{color:var(--sage-deep); border-color:var(--sage);}
+
+  /* ---- Hero ---- */
+  .hero{padding:5.5rem 0 4.5rem;}
+  .hero .wrap{
+    display:grid;
+    grid-template-columns:1fr minmax(120px, 220px);
+    gap:2rem; align-items:center;
+  }
+  .hero h1{
+    font-family:"Fraunces", Georgia, serif;
+    font-weight:500;
+    font-size:clamp(2.1rem, 5.2vw, 3.7rem);
+    line-height:1.08;
+    letter-spacing:-.012em;
+    margin:.4rem 0 1.4rem;
+    max-width:16ch;
+  }
+  .hero p.lede{
+    font-size:clamp(1.02rem, 1.6vw, 1.22rem);
+    color:var(--bark);
+    max-width:54ch;
+    margin:0;
+  }
+  .sprig{justify-self:end; align-self:center; opacity:.92;}
+  @media (max-width:720px){
+    .hero{padding:3.4rem 0 2.8rem;}
+    .hero .wrap{grid-template-columns:1fr;}
+    .sprig{display:none;}
+  }
+
+  /* ---- About strip ---- */
+  .about{border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .about .wrap{padding:3rem 28px;}
+  .about p{
+    font-family:"Fraunces", Georgia, serif;
+    font-weight:400;
+    font-size:clamp(1.15rem, 2.1vw, 1.55rem);
+    line-height:1.45;
+    margin:0; max-width:40ch;
+    color:var(--ink);
+  }
+  .about em{font-style:italic; color:var(--sage-deep);}
+
+  /* ---- Ventures ---- */
+  .ventures{padding:4.5rem 0 1rem;}
+  .ventures > .wrap > .eyebrow{text-align:left;}
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:18px;
+    margin-top:1.6rem;
+  }
+  @media (max-width:720px){ .grid{grid-template-columns:1fr;} }
+
+  /* Per-card brand theming via custom properties (set inline on each .venture).
+     Defaults fall back to the Woodsage sage identity. */
+  .venture{
+    --v-accent:var(--sage-deep);
+    --v-bar:var(--sage);
+    --v-tint:var(--sand);
+    background:var(--v-tint);
+    border:1px solid var(--line);
+    border-top:3px solid var(--v-bar);
+    border-radius:14px;
+    padding:1.6rem 1.6rem 1.5rem;
+    display:flex; flex-direction:column;
+    transition:transform .22s ease, box-shadow .22s ease;
+  }
+  .venture:hover{
+    transform:translateY(-3px);
+    box-shadow:0 16px 34px -22px rgba(44,51,39,.55);
+  }
+  .venture__plate{
+    height:104px; margin-bottom:1.3rem;
+    background:#fff;
+    border:1px solid rgba(44,51,39,.07);
+    border-radius:10px;
+    display:flex; align-items:center; justify-content:center;
+    padding:14px;
+  }
+  .venture__logo{max-height:100%; max-width:100%; width:auto; height:auto; display:block; object-fit:contain;}
+  .venture__tag{
+    font-size:.7rem; letter-spacing:.15em; text-transform:uppercase;
+    font-weight:600; color:var(--v-accent); margin:0 0 .6rem;
+  }
+  .venture__desc{margin:0 0 1.3rem; color:var(--ink);}
+  .venture__foot{
+    margin-top:auto;
+    display:flex; flex-wrap:wrap; gap:.4rem 1.3rem;
+    align-items:center;
+    padding-top:1rem;
+    border-top:1px solid var(--line);
+  }
+  .venture__link{
+    text-decoration:none; font-weight:600; font-size:.92rem;
+    color:var(--v-accent);
+    display:inline-flex; align-items:center; gap:.4rem;
+  }
+  .venture__link .arrow{transition:transform .2s ease;}
+  .venture__link:hover .arrow{transform:translateX(3px);}
+  .venture__email{
+    text-decoration:none; font-size:.86rem; color:var(--bark);
+    border-bottom:1px solid transparent; transition:border-color .2s ease, color .2s ease;
+  }
+  .venture__email:hover{border-color:var(--v-accent); color:var(--v-accent);}
+  .venture__paper{
+    text-decoration:none; font-size:.86rem; font-weight:600; color:var(--v-accent);
+    display:inline-flex; align-items:center; gap:.35rem;
+    border-bottom:1px solid transparent; transition:border-color .2s ease;
+  }
+  .venture__paper:hover{border-color:var(--v-accent);}
+
+  /* ---- Contact ---- */
+  .contact{padding:4.5rem 0 5.5rem;}
+  .contact .wrap{
+    display:flex; flex-wrap:wrap; align-items:baseline;
+    gap:.6rem 2.2rem;
+  }
+  .contact h2{
+    font-family:"Fraunces", Georgia, serif;
+    font-weight:500; font-size:clamp(1.7rem, 3.4vw, 2.4rem);
+    margin:0 2rem 0 0; line-height:1.1;
+  }
+  .contact .detail{
+    display:flex; flex-wrap:wrap; gap:.4rem 2.2rem; align-items:baseline;
+  }
+  .contact a{
+    text-decoration:none; font-weight:500;
+    border-bottom:1px solid var(--line); padding-bottom:1px;
+    transition:border-color .2s ease, color .2s ease;
+  }
+  .contact a:hover{color:var(--sage-deep); border-color:var(--sage);}
+  .contact .place{color:var(--bark);}
+
+  /* ---- Footer ---- */
+  footer{border-top:1px solid var(--line);}
+  footer .wrap{
+    padding:1.8rem 28px; display:flex; flex-wrap:wrap;
+    justify-content:space-between; gap:.6rem;
+    font-size:.84rem; color:var(--bark);
+  }
+
+  /* ---- Focus visibility ---- */
+  a:focus-visible{outline:2px solid var(--sage-deep); outline-offset:3px; border-radius:2px;}
+
+  /* ---- Load motion ---- */
+  .rise{opacity:0; transform:translateY(14px); animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards;}
+  .d1{animation-delay:.05s;} .d2{animation-delay:.16s;} .d3{animation-delay:.27s;}
+  @keyframes rise{to{opacity:1; transform:none;}}
+  @media (prefers-reduced-motion:reduce){
+    .rise{animation:none; opacity:1; transform:none;}
+    html{scroll-behavior:auto;}
+  }
+
+  @media (max-width:430px){
+    .wrap{padding:0 20px;}
+    .about .wrap, .contact .wrap, footer .wrap{padding-left:20px; padding-right:20px;}
+    .brand{font-size:1.04rem; gap:.45rem;}
+    .masthead nav{gap:.95rem;}
+    .masthead nav a{font-size:.72rem; letter-spacing:.09em;}
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Woodsage Partners home">
+      <!-- Sage leaf brandmark -->
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+        <path d="M11 20c-5-3-8-7-8-12 5 0 9 1 11 4 1.6 2.4 1.3 5.6-3 8z" fill="#7E8E6A"/>
+        <path d="M11 20c0-6 .5-10 3-13" stroke="#566A47" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+      Woodsage Partners
+    </a>
+    <nav>
+      <a href="#ventures">Ventures</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow rise d1">Holding company · Indianapolis, Indiana</p>
+        <h1 class="rise d2">Purpose-built ventures at the intersection of people, problem-solving, and technology.</h1>
+        <p class="lede rise d3">Woodsage Partners builds and stewards a small family of independent ventures, each applying creative problem-solving and applied AI to a problem worth solving.</p>
+      </div>
+
+      <!-- Signature: hand-drawn sage sprig -->
+      <svg class="sprig rise d3" width="190" height="240" viewBox="0 0 190 240" fill="none" aria-hidden="true">
+        <path d="M95 236C95 176 95 96 95 18" stroke="#566A47" stroke-width="2.2" stroke-linecap="round"/>
+        <g fill="#7E8E6A">
+          <path d="M95 196c-14-4-34-2-46 12 16 8 36 6 46-12z"/>
+          <path d="M95 196c14-4 34-2 46 12-16 8-36 6-46-12z"/>
+          <path d="M95 150c-13-4-31-2-42 11 15 7 33 5 42-11z"/>
+          <path d="M95 150c13-4 31-2 42 11-15 7-33 5-42-11z"/>
+          <path d="M95 106c-11-4-27-2-37 9 13 7 29 5 37-9z"/>
+          <path d="M95 106c11-4 27-2 37 9-13 7-29 5-37-9z"/>
+          <path d="M95 66c-9-3-21-1-29 8 11 5 23 3 29-8z"/>
+          <path d="M95 66c9-3 21-1 29 8-11 5-23 3-29-8z"/>
+        </g>
+        <path d="M95 30c-6-3-14-2-19 5 8 4 16 2 19-5z" fill="#566A47"/>
+        <path d="M95 30c6-3 14-2 19 5-8 4-16 2-19-5z" fill="#566A47"/>
+        <circle cx="95" cy="18" r="3.4" fill="#566A47"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <div class="wrap">
+      <p>One parent, several missions. Each Woodsage venture is run on its own terms — united by a belief that the hardest human problems yield to <em>diverse teams, disciplined creativity, and the right technology.</em></p>
+    </div>
+  </section>
+
+  <!-- VENTURES -->
+  <section class="ventures" id="ventures">
+    <div class="wrap">
+      <p class="eyebrow">The ventures</p>
+      <div class="grid">
+
+        <!-- Dude2Dude -->
+        <article class="venture" style="--v-accent:#2E4A33; --v-bar:#A07D40; --v-tint:#EDEFE4;">
+          <div class="venture__plate">
+            <img class="venture__logo" src="dude2dude-logo.png" alt="Dude2Dude">
+          </div>
+          <p class="venture__tag">Recovery community</p>
+          <p class="venture__desc">A digital recovery community supporting men through the cardiac surgery journey — from diagnosis to the road back.</p>
+          <div class="venture__foot">
+            <a class="venture__link" href="https://dude2dude.com" target="_blank" rel="noopener">Visit site <span class="arrow">&rarr;</span></a>
+            <a class="venture__email" href="mailto:ron@dude2dude.com">ron@dude2dude.com</a>
+          </div>
+        </article>
+
+        <!-- Struinova Innovation -->
+        <article class="venture" style="--v-accent:#2B3A4D; --v-bar:#EE9A2E; --v-tint:#ECEEF1;">
+          <div class="venture__plate">
+            <img class="venture__logo" src="struinova-logo.jpg" alt="Struinova Innovation">
+          </div>
+          <p class="venture__tag">Innovation services</p>
+          <p class="venture__desc">Professional services in innovation, facilitation, and creative problem-solving — with applied AI woven into the foundation.</p>
+          <div class="venture__foot">
+            <a class="venture__link" href="https://struinova.com" target="_blank" rel="noopener">Visit site <span class="arrow">&rarr;</span></a>
+            <a class="venture__email" href="mailto:ron@struinova.com">ron@struinova.com</a>
+          </div>
+        </article>
+
+        <!-- Team Monocles -->
+        <article class="venture" style="--v-accent:#8B1A1A; --v-bar:#5E7180; --v-tint:#EFEDED;">
+          <div class="venture__plate">
+            <img class="venture__logo" src="team-monocles-logo.png" alt="Team Monocles">
+          </div>
+          <p class="venture__tag">Public safety &amp; AI</p>
+          <p class="venture__desc">Team-structure consulting and AI-assisted methods that help law enforcement reopen and work cold-case homicides.</p>
+          <div class="venture__foot">
+            <a class="venture__link" href="https://teammonocles.com" target="_blank" rel="noopener">Visit site <span class="arrow">&rarr;</span></a>
+            <a class="venture__paper" href="Team-Monocles-Whitepaper-Fall-2024.pdf" target="_blank" rel="noopener" download>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1v9m0 0L4.5 6.5M8 10l3.5-3.5M2.5 13.5h11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Whitepaper
+            </a>
+          </div>
+        </article>
+
+        <!-- HomeGrown Apprenticeships -->
+        <article class="venture" style="--v-accent:#155230; --v-bar:#155230; --v-tint:#E8EFE8;">
+          <div class="venture__plate">
+            <img class="venture__logo" src="homegrown-logo.png" alt="HomeGrown Apprenticeships">
+          </div>
+          <p class="venture__tag">Workforce development</p>
+          <p class="venture__desc">Helping communities and local employers design and launch apprenticeships for the knowledge-based careers of the future.</p>
+          <div class="venture__foot">
+            <a class="venture__link" href="https://homegrownapprenticeships.com" target="_blank" rel="noopener">Visit site <span class="arrow">&rarr;</span></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2>Get in touch</h2>
+      <div class="detail">
+        <a href="mailto:ron@brumbarger.com">ron@brumbarger.com</a>
+        <a href="tel:+13174904376">317.490.4376</a>
+        <span class="place">Indianapolis, Indiana · USA</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Woodsage Partners, Inc.</span>
+    <span>Indianapolis, Indiana</span>
+  </div>
+</footer>
+
+</body>
+</html>
