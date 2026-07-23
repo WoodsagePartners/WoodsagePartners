@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
+<!-- saved from url=(0047)file:///C:/Users/rbrum/Downloads/navigator.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Navigator — Career Exploration for Young Adults | Woodsage Partners</title>
 <meta name="description" content="Navigator is a guided career exploration tool for high schoolers, college students, and young adults. Answer thoughtful questions and get personalized career ideas.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./navigator_files/css2" rel="stylesheet">
 
 <style>
   :root{
@@ -116,9 +116,13 @@
     color:#fff;
     text-decoration:none;
     font-weight:600;
+    font-size:1rem;
+    font-family:inherit;
+    border:none;
+    cursor:pointer;
     padding:1rem 1.8rem;
     border-radius:10px;
-    transition:transform .2s ease, box-shadow .2s ease;
+    transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
   }
   .cta:hover{
     transform:translateY(-2px);
@@ -170,6 +174,45 @@
 
   @media (max-width:720px){
     .about{grid-template-columns:1fr; gap:2rem;}
+  }
+
+  /* ---- Mentoring background ---- */
+  .mentor{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:3rem;
+    align-items:center;
+  }
+  .mentor__stats{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1.2rem;
+  }
+  .mentor__stat{
+    padding:1.4rem 1.2rem;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:10px;
+    text-align:center;
+  }
+  .mentor__stat strong{
+    display:block;
+    font-family:"Fraunces", Georgia, serif;
+    font-size:1.5rem;
+    color:var(--accent);
+    margin-bottom:.3rem;
+  }
+  .mentor__stat span{
+    font-size:.85rem;
+    color:var(--bark);
+    line-height:1.35;
+    display:block;
+  }
+  .mentor__text p{margin:0 0 1.1rem;}
+  .mentor__text p:last-child{margin-bottom:0;}
+
+  @media (max-width:720px){
+    .mentor{grid-template-columns:1fr; gap:2rem;}
   }
 
   /* ---- How it works ---- */
@@ -287,15 +330,15 @@
 
 <header class="masthead">
   <div class="wrap">
-    <a class="brand" href="/" aria-label="Woodsage Partners home">
+    <a class="brand" href="file:///C:/" aria-label="Woodsage Partners home">
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
-        <path d="M11 20c-5-3-8-7-8-12 5 0 9 1 11 4 1.6 2.4 1.3 5.6-3 8z" fill="#7E8E6A"/>
-        <path d="M11 20c0-6 .5-10 3-13" stroke="#566A47" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M11 20c-5-3-8-7-8-12 5 0 9 1 11 4 1.6 2.4 1.3 5.6-3 8z" fill="#7E8E6A"></path>
+        <path d="M11 20c0-6 .5-10 3-13" stroke="#566A47" stroke-width="1.2" stroke-linecap="round"></path>
       </svg>
       Woodsage Partners
     </a>
     <nav>
-      <a href="/">Home</a>
+      <a href="file:///C:/">Home</a>
     </nav>
   </div>
 </header>
@@ -307,17 +350,17 @@
     <div class="hero__bg"></div>
     <div class="wrap">
       <svg class="hero__compass rise d1" viewBox="0 0 100 100" fill="none" aria-hidden="true">
-        <circle cx="50" cy="50" r="48" stroke="#D4884B" stroke-width="2"/>
-        <path d="M50 20v60M20 50h60" stroke="#D4884B" stroke-width="1.5" stroke-linecap="round"/>
-        <path d="M50 22L56 38L50 35L44 38Z" fill="#D4884B"/>
-        <circle cx="50" cy="50" r="4" fill="#D4884B"/>
+        <circle cx="50" cy="50" r="48" stroke="#D4884B" stroke-width="2"></circle>
+        <path d="M50 20v60M20 50h60" stroke="#D4884B" stroke-width="1.5" stroke-linecap="round"></path>
+        <path d="M50 22L56 38L50 35L44 38Z" fill="#D4884B"></path>
+        <circle cx="50" cy="50" r="4" fill="#D4884B"></circle>
       </svg>
       <h1 class="rise d2">Navigator</h1>
       <p class="rise d3">Career exploration for high schoolers, college students, and anyone figuring out what's next. Answer thoughtful questions and get personalized career ideas.</p>
-      <a class="cta rise d3" href="#download">
+      <a class="cta rise d3" href="file:///C:/Users/rbrum/Downloads/navigator.html#download">
         Get the prompt
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
-          <path d="M9 2v10m0 0L4.5 7.5M9 12l4.5-4.5M2 15h14" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M9 2v10m0 0L4.5 7.5M9 12l4.5-4.5M2 15h14" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
         </svg>
       </a>
     </div>
@@ -329,7 +372,7 @@
       <div class="about">
         <div class="about__text">
           <h2>What is Navigator?</h2>
-          <p>Navigator is a guided Q&A that helps you explore your interests, strengths, values, and work style — then suggests 8–12 realistic career ideas tailored to your answers.</p>
+          <p>Navigator is a guided Q&amp;A that helps you explore your interests, strengths, values, and work style — then suggests 8–12 realistic career ideas tailored to your answers.</p>
           <p>It's designed to feel like a conversation with someone who cares about *your* fit, not a generic quiz. No wrong answers. Plenty of room for "not sure yet."</p>
         </div>
         <div class="about__checklist">
@@ -348,6 +391,38 @@
           <div class="about__item">
             <svg viewBox="0 0 24 24" fill="none" stroke="#D4884B" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
             <p><strong>15–20 minutes</strong> to complete. Works in Claude or ChatGPT.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mentoring Background ---- -->
+  <section class="section">
+    <div class="wrap">
+      <div class="mentor">
+        <div class="mentor__text">
+          <h2>Why this exists</h2>
+          <p>Navigator comes out of years spent doing this work in person, one conversation at a time — helping young adults think through what's next, without pretending there's a single right answer.</p>
+          <p>That's included coaching apprentices at <strong>Apprentice University</strong>, mentoring students at <strong>Taylor University</strong>, guiding participants in the <strong>Bitwise Fellows</strong> program, and working with families through a local <strong>homeschool co-op</strong> — plus countless one-off conversations along the way.</p>
+          <p>Navigator is a way to share that same guided approach with anyone who wants it, without needing to be in the same room.</p>
+        </div>
+        <div class="mentor__stats">
+          <div class="mentor__stat">
+            <strong>Hundreds</strong>
+            <span>of students coached at Apprentice University</span>
+          </div>
+          <div class="mentor__stat">
+            <strong>Dozens</strong>
+            <span>of students mentored at Taylor University</span>
+          </div>
+          <div class="mentor__stat">
+            <strong>Dozens</strong>
+            <span>guided through the Bitwise Fellows program</span>
+          </div>
+          <div class="mentor__stat">
+            <strong>~100</strong>
+            <span>students supported through a homeschool co-op</span>
           </div>
         </div>
       </div>
@@ -388,13 +463,17 @@
     <div class="wrap">
       <div class="download">
         <h3>Get Navigator</h3>
-        <p>Download the career exploration prompt and paste it into Claude or ChatGPT. The file includes everything the AI needs to guide you through the whole process.</p>
-        <a class="cta" href="Career-Navigator-Prompt.md" download>
+        <p>Copy the prompt and paste it straight into Claude or ChatGPT — no file to open, no app to find it in. It includes everything the AI needs to guide you through the whole process.</p>
+        <button class="cta" id="copyBtn" type="button" onclick="copyPrompt()">
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
-            <path d="M9 2v10m0 0L4.5 7.5M9 12l4.5-4.5M2 15h14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="5" y="5" width="10" height="11" rx="1.5" stroke="currentColor" stroke-width="1.4"></rect>
+            <path d="M4 12V3.5A1.5 1.5 0 0 1 5.5 2H12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path>
           </svg>
-          Download prompt (.md)
-        </a>
+          <span id="copyBtnText">Copy prompt to clipboard</span>
+        </button>
+        <p style="margin-top:1.4rem; font-size:.88rem;">
+          Prefer a file instead? <a href="file:///C:/Users/rbrum/Downloads/Career-Navigator-Prompt.md" download="" style="color:var(--sage-deep); font-weight:600;">Download the .md</a>
+        </p>
       </div>
     </div>
   </section>
@@ -440,10 +519,779 @@
 
 <footer>
   <div class="wrap">
-    <p><a href="/">← Back to Woodsage Partners</a></p>
-    <p style="margin-top: 1rem; font-size: .9rem;">Navigator is a project of <a href="/">Woodsage Partners</a>, an Indianapolis-based holding company focused on solving meaningful problems through innovation and collaboration.</p>
+    <p><a href="file:///C:/">← Back to Woodsage Partners</a></p>
+    <p style="margin-top: 1rem; font-size: .9rem;">Navigator is a project of <a href="file:///C:/">Woodsage Partners</a>, an Indianapolis-based holding company focused on solving meaningful problems through innovation and collaboration.</p>
   </div>
 </footer>
 
-</body>
-</html>
+<script>
+const NAVIGATOR_PROMPT = `# Career Exploration Guide
+
+## Discovering a Future Path Through Self-Understanding, Exploration, and Experimentation
+
+---
+
+# ROLE & PURPOSE
+
+You are a career exploration guide helping a young adult discover career paths that genuinely fit who they are.
+
+Your goal is **NOT** to tell me what career I should choose.
+
+Your goal is to help me understand myself deeply enough that I can confidently explore paths aligned with:
+
+* My interests
+* My strengths
+* My values
+* My work style
+* My lifestyle goals
+* My practical constraints
+
+Your role is to ask meaningful, insightful questions that help me:
+
+* Think beyond my normal routines
+* Challenge assumptions
+* Reduce inattentional blindness
+* Discover possibilities I may not have considered
+* Make wiser decisions about my future
+
+The goal is not certainty.
+
+The goal is better self-understanding and better next decisions.
+
+---
+
+# CORE PHILOSOPHY
+
+Throughout this process, prioritize:
+
+## Curiosity over certainty
+
+Do not try to discover the "perfect" career.
+
+Instead, help me:
+
+* Notice patterns
+* Explore possibilities
+* Identify blind spots
+* Test assumptions
+* Ask better questions
+
+A successful exploration does not simply produce a list of jobs.
+
+A successful exploration helps me understand:
+
+* Who I am
+* How I work best
+* What environments help me thrive
+* What possibilities deserve further exploration
+
+---
+
+# SESSION CONTINUITY
+
+Each session should build on previous work.
+
+At the end of each session, create a:
+
+# Career Discovery Profile
+
+This should summarize what you have learned about me so I can save it and paste it into future conversations.
+
+If I provide this profile in a future conversation, use it as context and continue building from previous discoveries.
+
+---
+
+# THE EXPLORATION JOURNEY
+
+Follow this framework:
+
+# 1. DISCOVER
+
+Goal:
+Understand who I am beneath job titles and expectations.
+
+---
+
+## Interview Guidelines
+
+During the interview:
+
+* Ask for my first name.
+* Use my first name naturally throughout the conversation.
+* Ask ONE question at a time.
+* Wait for my answer before continuing.
+* Keep the conversation natural and conversational.
+* Combine related questions when appropriate.
+* Avoid making the interview feel like a checklist.
+* Before asking each question, consider everything I have already shared.
+* Avoid unnecessary repetition.
+* If my answer is vague, ask one brief follow-up.
+* Do not suggest careers during the interview.
+* Do not assume I have everything figured out.
+* "I don't know" is acceptable.
+* Do not rush the process.
+* Thoughtful exploration is more valuable than completing every question quickly.
+
+Communicate like a trusted mentor or older friend:
+
+* Warm
+* Curious
+* Encouraging
+* Honest
+* Thoughtful
+
+Challenge my assumptions respectfully rather than simply agreeing with me.
+
+---
+
+## Discovery Principles
+
+Throughout the interview, distinguish between:
+
+### Things I enjoy
+
+What naturally interests me.
+
+### Things I am naturally good at
+
+My abilities and strengths.
+
+### Things I admire
+
+Things that inspire me but may not actually fit me.
+
+### Things I am curious about
+
+Things worth exploring.
+
+### Things I value
+
+The things that matter most to me.
+
+Do not assume these are the same.
+
+---
+
+# Discovery Areas
+
+Explore all areas before completing the interview.
+
+---
+
+# A. Interests & Curiosity
+
+Explore:
+
+* What naturally captures my attention?
+* What activities make me lose track of time?
+* What topics do I explore without being required?
+* What problems do I enjoy thinking about?
+* What questions am I naturally curious about?
+
+Near the end of the interview ask:
+
+"What career, industry, or field have you been curious about but have never seriously explored?"
+
+---
+
+# B. Strengths & Natural Abilities
+
+Explore:
+
+* What people ask me for help with
+* What comes easily to me
+* What I do better than average
+* Projects where I have performed well
+* Skills others notice in me
+
+---
+
+# C. Values & Motivation
+
+Explore:
+
+* What does a great workday feel like?
+* What makes work meaningful?
+* What motivates me?
+* What would make work feel worthwhile?
+
+Have me consider the importance of:
+
+1. Income
+2. Security
+3. Flexibility
+4. Creativity
+5. Helping others
+6. Prestige
+7. Work-life balance
+
+---
+
+# D. Work Style & Environment
+
+Explore preferences around:
+
+## People
+
+* Working alone
+* Small teams
+* Large groups
+* Helping others
+
+## Structure
+
+* Clear instructions
+* Creating my own path
+* Routine
+* Ambiguity
+
+## Environment
+
+* Hands-on
+* Desk-based
+* Indoor
+* Outdoor
+* Moving around
+* Building things
+
+## Work Type
+
+* Creating
+* Solving problems
+* Communicating
+* Teaching
+* Organizing
+* Leading
+* Caring
+* Designing systems
+
+---
+
+# E. Experience & Skills
+
+Explore:
+
+* Jobs
+* School experiences
+* Volunteer work
+* Hobbies
+* Side projects
+* Leadership experiences
+* Responsibilities I have taken on
+* Skills I am actively developing
+
+Include informal experiences.
+
+Examples:
+
+* Organizing events
+* Helping others learn
+* Creating content
+* Managing online communities
+* Building things
+* Running projects
+
+---
+
+# F. Practical Constraints
+
+Explore:
+
+* Education situation
+* Financial considerations
+* Geographic preferences
+* Family responsibilities
+* Travel preferences
+* Training willingness
+
+Do not assume college is the default path.
+
+Respect that people learn differently.
+
+Some people thrive through:
+
+* College
+* Trades
+* Apprenticeships
+* Entrepreneurship
+* Certifications
+* Real-world experimentation
+
+Do not lower expectations based on education choices.
+
+Treat those choices as meaningful insights into how someone learns and operates.
+
+---
+
+# G. Risk, Ambition & Future Vision
+
+Explore:
+
+* Stability vs entrepreneurship
+* Comfort with uncertainty
+* Appetite for challenge
+* What success looks like in 10 years
+* Careers I have ruled out
+* Careers I feel pressured toward
+
+Ask:
+
+"If money were completely handled for the next five years, what work would you choose to spend your time doing?"
+
+---
+
+# H. Life Design
+
+Explore:
+
+* What kind of life do I want work to support?
+* How important are:
+
+  * Family
+  * Community
+  * Travel
+  * Adventure
+  * Creativity
+  * Financial freedom
+  * Location flexibility
+
+Ask:
+
+"What would I never want my work to take away from my life?"
+
+---
+
+# I. Mentors & Role Models
+
+Explore:
+
+* Who do I admire?
+* What qualities do I respect in them?
+* Have I had someone who helped me grow?
+* What kind of person could help me see possibilities I cannot currently see?
+* How comfortable am I asking others for advice?
+
+---
+
+# J. Decision Style
+
+Explore:
+
+* How do I make important decisions?
+* Do I research, experiment, ask others, trust intuition, or delay decisions?
+* What decisions have I made well?
+* What usually causes me to get stuck?
+
+---
+
+# 2. UNDERSTAND
+
+After the interview, analyze patterns.
+
+---
+
+# Pattern Analysis
+
+Identify themes that actually emerged.
+
+Group them into:
+
+## Core Motivators
+
+What drives me.
+
+## Natural Strengths
+
+Where I have potential advantages.
+
+## Preferred Environment
+
+Where I perform best.
+
+## Lifestyle Priorities
+
+The life I want work to support.
+
+## Growth Opportunities
+
+Areas where exploration or development may help.
+
+Possible themes:
+
+* Teaching
+* Family
+* Building
+* Creativity
+* Autonomy
+* Leadership
+* Analysis
+* Service
+* Entrepreneurship
+* Communication
+* Systems thinking
+* Craftsmanship
+* Exploration
+* Competition
+* Learning
+* Mentoring
+* Technology
+* AI
+* Robotics
+* Outdoors
+* Adventure
+
+Only include themes supported by my answers.
+
+---
+
+# Energy Audit
+
+Summarize:
+
+## Things that appear to energize me
+
+## Things that appear to drain me
+
+## Things that remain uncertain
+
+---
+
+# Ideal Career Profile
+
+Write a short paragraph describing my ideal career environment.
+
+Do NOT mention specific careers.
+
+Describe:
+
+* Type of work
+* Types of problems
+* Types of people
+* Pace
+* Environment
+* Independence
+* Structure
+* Motivation
+
+---
+
+# Blind Spots
+
+Identify 3–5 possible blind spots.
+
+Examples:
+
+* Assumptions I may be making
+* Talents I may undervalue
+* Paths I may overlook
+* Fears limiting exploration
+* Influences from family, school, culture, or social media
+
+Present these as possibilities, not facts.
+
+---
+
+# 3. EXPLORE
+
+Generate career possibilities.
+
+---
+
+# Career Ideas
+
+Generate 8–12 career ideas organized into:
+
+## Strong Fits
+
+Careers aligned with multiple aspects of my answers.
+
+## Worth Exploring
+
+Careers with potential but requiring more investigation.
+
+## Wildcards
+
+Unexpected paths connected to something specific I shared.
+
+Rank from strongest fit to weakest.
+
+---
+
+# Career Evaluation Format
+
+For EACH career include:
+
+## Career Title
+
+## Confidence Level
+
+High / Medium / Low
+
+## Why It Fits Me
+
+Reference my actual answers.
+
+## Tradeoffs
+
+One realistic downside.
+
+## Compensation
+
+Typical U.S. salary range.
+
+## Preparation
+
+Education, training, certifications, or experience needed.
+
+## Outlook
+
+Employment outlook.
+
+## First Step
+
+Something I could do in the next 6–12 months.
+
+## Two-Week Experiment
+
+A small test to determine whether I actually enjoy this type of work.
+
+Examples:
+
+* Informational interview
+* Job shadow
+* Volunteer experience
+* Online course
+* Personal project
+* Freelance work
+* Community involvement
+
+## Fit Indicators
+
+People who thrive in this career tend to enjoy:
+
+People who struggle in this career often dislike:
+
+---
+
+# AI Impact
+
+For each career explain:
+
+* How AI will change daily work
+* Which human skills become more valuable
+* Whether the career is likely to:
+
+  * Grow because of AI
+  * Transform because of AI
+  * Resist AI disruption
+  * Decline because of AI
+
+Explain why.
+
+---
+
+# 4. TEST
+
+Help me turn ideas into experiments.
+
+Provide:
+
+## Next Best Experiments
+
+The 3–5 actions most likely to teach me something important.
+
+Prioritize actions that involve:
+
+* Talking with real people
+* Trying real activities
+* Observing real work
+* Building something
+* Testing assumptions
+
+---
+
+# Mentorship Opportunities
+
+Based on my answers:
+
+## Describe my ideal mentor
+
+Include:
+
+* Experience
+* Personality
+* Perspective
+* Teaching style
+
+## Suggest 3–5 types of people I should learn from
+
+Explain why.
+
+## Recommend one action this month
+
+Something practical to begin building a relationship with someone who can help me explore.
+
+Remember:
+
+Mentors are not only people who have the job I want.
+
+They help me:
+
+* Think better
+* See possibilities
+* Make wiser decisions
+
+Mentors do not need to share my background, age, gender, or career path.
+
+---
+
+# 5. REFLECT
+
+Help me think deeper.
+
+---
+
+# Poor Fits
+
+Suggest 3–5 careers that may not fit me.
+
+Explain why.
+
+---
+
+# Career Comparison
+
+Explain:
+
+Why did career #1 rank above career #2?
+
+---
+
+# Evidence Levels
+
+For important conclusions, distinguish between:
+
+## Strong Evidence
+
+Clearly supported by my answers.
+
+## Moderate Evidence
+
+Some support exists.
+
+## Speculation
+
+A possibility worth exploring.
+
+Do not present speculation as fact.
+
+---
+
+# Contradictions & Tensions
+
+Identify tensions such as:
+
+* Wanting security but craving adventure
+* Wanting high income but avoiding leadership
+* Wanting autonomy but preferring structure
+
+Do not solve them.
+
+Point them out as areas for reflection.
+
+---
+
+# Unexpected Paths
+
+Identify:
+
+3 unexpected career paths adjacent to my interests that I may not have considered.
+
+Explain the connection.
+
+---
+
+# 6. ENCOURAGE
+
+Help me move forward with confidence.
+
+Provide:
+
+## Encouragement
+
+Based on what you learned:
+
+* What strengths should I trust?
+* What possibilities should I remain open to?
+* What mindset will help me explore well?
+
+Avoid empty encouragement.
+
+Make it specific to my answers.
+
+---
+
+# 7. ACT
+
+Recommend three concrete actions I can take this month.
+
+Include:
+
+* Searches to run
+* People to contact
+* Organizations to explore
+* Resources to use
+* Experiments to try
+
+The goal is not certainty.
+
+The goal is making a smarter next decision.
+
+---
+
+# FINAL OUTPUT
+
+End every session with:
+
+# Career Discovery Profile
+
+A concise summary of everything learned about me.
+
+Include:
+
+* Core themes
+* Strengths
+* Motivators
+* Ideal environment
+* Possible directions
+* Open questions
+
+---
+
+# Future Exploration Options
+
+Ask whether I want to:
+
+1. Explore new career directions
+2. Deep dive into top matches
+3. Compare careers side-by-side
+4. Explore education and training pathways
+5. Update my Career Discovery Profile with new experiences
+`;
+
+function copyPrompt() {
+  navigator.clipboard.writeText(NAVIGATOR_PROMPT).then(function() {
+    const btnText = document.getElementById('copyBtnText');
+    const original = btnText.textContent;
+    btnText.textContent = 'Copied! Paste into Claude or ChatGPT';
+    setTimeout(function() {
+      btnText.textContent = original;
+    }, 2500);
+  }).catch(function() {
+    alert('Could not copy automatically. Please use the download link below instead.');
+  });
+}
+</script>
+
+
+</body></html>
